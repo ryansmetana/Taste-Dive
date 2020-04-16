@@ -1,0 +1,37 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging C:\Development\Play\ist411-tastedive-app-testing\target\scala-2.12\play-java-starter-example_2.12-1.0-SNAPSHOT-web-assets.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts\removeFavorites.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\javascripts\removeFavorites.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/less[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\less[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/images[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\public\images[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts\cytoscape.min.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\javascripts\cytoscape.min.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts\main.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\public\javascripts\main.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts\cytoscape-cola.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\javascripts\cytoscape-cola.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/images\favicon.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\public\images\favicon.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\javascripts[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts\cola.min.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\javascripts\cola.min.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/stylesheets\main.css[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\public\stylesheets\main.css[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts\collapsible.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\javascripts\collapsible.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/less\main.css.map[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\target\web\less\main\less\main.css.map[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\public\javascripts[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/less\main.less[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\less\main.less[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts\mediamap.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\app\assets\javascripts\mediamap.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/less\main.css[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\target\web\less\main\less\main.css[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/stylesheets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Development\Play\ist411-tastedive-app-testing\public\stylesheets[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

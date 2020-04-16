@@ -1,0 +1,15 @@
+@import play.mvc.Http.Request
+@(favoriteList: Seq[Media])
+
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src='@routes.Assets.versioned("javascripts/removeFavorites.js")'></script>
+<table>
+    <thead>
+    <tr><th>Name</th><th>Type</th><th>Wikipedia Link</th><th>Video Link</th><th></th>
+    </thead>
+    <tbody>
+    @for(m <- favoriteList) {
+    <tr><td>@m.name</td><td>@m.mediaType</td><td><a href="@m.wikiLink" target="_blank">@m.wikiLink</a></td><td><a href="@m.videoLink" target="_blank">@m.videoLink</a></td><td><button onclick="removeFavorite('@m.name@m.mediaType')">Remove</button></td></tr>
+    }
+    </tbody>
+</table>

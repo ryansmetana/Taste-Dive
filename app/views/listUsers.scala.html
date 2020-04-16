@@ -1,0 +1,18 @@
+@import play.mvc.Http.Request
+@(users: Seq[User])(implicit request: Request, messages: play.i18n.Messages)
+
+@main("Users") {
+    <h1>Saved Users</h1>
+    <table>
+        <thead>
+            <tr><th>Username</th><th>Password</th>
+        </thead>
+        <tbody>
+        @for(u <- users) {
+            <tr><td>@u.username</td><td>@u.password</td></tr>
+        }
+        </tbody>
+    </table>
+    <hr/>
+
+}

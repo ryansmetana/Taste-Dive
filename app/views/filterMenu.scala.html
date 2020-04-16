@@ -1,0 +1,87 @@
+@import play.mvc.Http.Request
+@(favoriteList: Seq[Media], form: Form[MediaData], filterList: Form[FilterList], selectedName: String, selectedType: String, selectedDescription: String, selectedWurl: String, selectedVurl: String)(implicit request: Request, messages: play.i18n.Messages)
+
+@main("Favorites") {
+
+            <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script src='@routes.Assets.versioned("javascripts/cytoscape.min.js")'></script>
+            <script src='@routes.Assets.versioned("javascripts/cola.min.js")'></script>
+            <script src='@routes.Assets.versioned("javascripts/cytoscape-cola.js")'></script>
+            <script src='@routes.Assets.versioned("javascripts/mediamap.js")'></script>
+
+            @* Flash shows updates to a page *@
+            @request.flash.asScala().data.map { case (name, mediaType) =>
+                <div class="@name">@mediaType</div>
+            }
+
+            @* Global errors are not tied to any particular form field *@
+            @if(form.hasGlobalErrors) {
+                @form.globalErrors.asScala.map { error: play.data.validation.ValidationError =>
+                    <div>@error.key: @error.message</div>
+                }
+            }
+
+            <h1>Search For Similar Media</h1>
+            <link rel="stylesheet" type="text/css" href='@routes.Assets.versioned("less/main.css")'>
+            <button class="collapsible">Search Window</button>
+            <div class="content">
+                Search for media similar to: <input type="text" id="search"><br>
+                Filter out music: <input type="checkbox" id="filterMusic"><br>
+                Filter out movies: <input type="checkbox" id="filterMovies"><br>
+                Filter out TV shows: <input type="checkbox" id="filterShows"><br>
+                Filter out podcasts: <input type="checkbox" id="filterPodcasts"><br>
+                Filter out books: <input type="checkbox" id="filterBooks"><br>
+                Filter out authors: <input type="checkbox" id="filterAuthors"><br>
+                Filter out games: <input type="checkbox" id="filterGames"><br>
+                <button onclick="getNodes(document.getElementById('search').value)" type="button">Search for similar media</button>
+            </div>
+<script type='text/javascript' src='@routes.Assets.versioned("javascripts/collapsible.js")'></script>
+
+<table width="1500" height="500">
+    @* Main Column *@
+    <col width="60%">
+    @* Sidebar *@
+    <col width="40%" style="background-color: lightgray;">
+    <tr>
+        <th><h2>Media Map</h2></th>
+        <th><h2>Selected Media</h2></th>
+    </tr>
+    <tr>
+        <td>
+
+
+        <div class="cytoscape" id="cy"></div>
+
+        </td>
+        <td>
+            <b>Name:</b>
+            <p id="mediaDisplayName"></p>
+            <b>Type:</b>
+            <p id="mediaDisplayType"></p>
+            <b>Description:</b>
+            <p id="mediaDisplayDescription"></p>
+            <h4>Wikipedia Link:</h4>
+            <p id="mediaDisplayWikiLink"></p>
+            <h4>Video Link</h4>
+            <p id="mediaDisplayVideo"></p>
+        </td>
+    </tr>
+</table>
+
+<h1>Favorites</h1>
+<iframe id="favoritesList" src="@routes.FavoritesController.getFavoritesList" height="100%" width="100%"></iframe>
+
+@helper.form(routes.FavoritesController.openChangePasswordPage){
+<button type="submit">Change Password</button>
+}
+
+@helper.form(routes.LoginController.index){
+<button type="submit">Sign Out</button>
+}
+
+}
+
+
+
+
+

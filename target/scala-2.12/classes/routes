@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home Page/Login Page
+GET     /                           controllers.LoginController.index
+POST    /                           controllers.LoginController.authenticateUser(request: Request)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# Filters/favorites/searches
+GET     /users/default/favorites    controllers.FavoritesController.getFavorites(request: Request)
+POST	/users/default/favorites	 controllers.FavoritesController.addFavorite(request: Request)
+DELETE  /users/default/favorites    controllers.FavoritesController.removeFavorite(request: Request)
+GET     /users/default/search/:qString       controllers.FavoritesController.getSearchResults(qString: String)
+GET     /users/default/favoriteslist    controllers.FavoritesController.getFavoritesList(request: Request)
+
+# Users
+GET     /newUser                    controllers.LoginController.openNewUserPage(request: Request)
+POST    /newUser                    controllers.LoginController.createUser(request: Request)
+
+#Change Password Page
+GET     /security                   controllers.FavoritesController.openChangePasswordPage(request: Request)
+POST    /security                   controllers.FavoritesController.changePassword(request: Request)
